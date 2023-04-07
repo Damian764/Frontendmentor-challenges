@@ -1,0 +1,50 @@
+@use "../assets/styles/colors" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $page-background;
+    color: $primary-font-color;
+    font-family: "Montserrat";
+    .container {
+        padding-inline: 10vw;
+    }
+
+    .logo {
+        .light {
+            display: none;
+        }
+        .dark {
+            display: block;
+        }
+    }
+}
+
+[theme="light"] {
+    .logo {
+        .light {
+            display: block;
+        }
+        .dark {
+            display: none;
+        }
+    }
+}
+
+// Temporary styles - remove it later
+.hero {
+    min-height: 100vh;
+    background-color: #bbe1c3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    font-size: 2.5em;
+}
+.about-me {
+    padding-block: 2em;
+}
+.footer {
+    padding-block: 2em;
+}
