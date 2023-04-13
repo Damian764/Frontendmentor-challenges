@@ -5,7 +5,9 @@ import NotFound from './layout/error/NotFound'
 import Root from './routes/Root'
 import Index from './routes/Index'
 import Challenges from './routes/Challenges'
-import './index.scss'
+import { loader as challengesLoader } from './components/ChallengeList'
+import Challenge, { loader as challengeLoader } from './components/Challenge'
+import './_main.scss'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +21,13 @@ const router = createBrowserRouter([
       {
         path: 'challenges',
         element: <Challenges />,
-        errorElement: <NotFound />
+        errorElement: <NotFound />,
+        loader: challengesLoader
+      },
+      {
+        path: 'challenges/:challengeId',
+        element: <Challenge />,
+        loader: challengeLoader
       }
     ]
   }

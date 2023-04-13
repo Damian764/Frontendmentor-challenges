@@ -1,10 +1,10 @@
-export interface MenuLink {
+export interface MenuLinkStructure {
     id: number,
     title: string,
     link: string
 }
 
-export const menu_data: MenuLink[] = [
+export const menu_data: MenuLinkStructure[] = [
     {
         id: 1,
         title: "Home",

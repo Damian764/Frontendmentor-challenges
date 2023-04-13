@@ -1,16 +1,48 @@
-const index = () => {
+import AnimateOnScroll from '../utils/AnimateOnScroll'
+import TextHoverEffect from '../utils/TextHoverEffect'
+
+import './css/_index.scss'
+
+const Index = () => {
   return (
     <>
-    <div className="hero">
-        <h1>Temporary hero section</h1>
-        <p>Gonna change this section later</p>
-    </div>
-    <div className="about-me container">
+      <div className="hero">
+        <AnimateOnScroll
+          options={{
+            type: 'slide-in',
+            delay: 100
+          }}
+        >
+          <h1><TextHoverEffect text="Hi there!"/></h1>
+        </AnimateOnScroll>
+        <AnimateOnScroll
+          options={{
+            type: 'slide-in-left',
+            delay: 300
+          }}
+          reappear>
+          <p>My name is Damian and I'm a frontend developer</p>
+        </AnimateOnScroll>
+      </div>
+      <div className="about-me container">
         <h2>About me section</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
-    </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eos debitis quaerat quam vero distinctio? Consequatur repellat nisi minus alias! Aliquid nemo similique dicta quia aliquam hic molestiae minima molestias?</p>
+      </div>
     </>
   )
 }
 
-export default index
+export default Index

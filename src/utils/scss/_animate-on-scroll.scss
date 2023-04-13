@@ -1,0 +1,124 @@
+
+/*=============================
+    00. AnimateOnScroll
+===============================*/
+
+.animation {
+    transition-duration: var(--transition-duration, 300ms);
+    transition-delay: var(--transition-delay, 0ms);
+    transition-timing-function: var(--transition-timing, ease-out);
+    &__type {
+        &-fade {
+            &-in {
+                opacity: 0;
+                &.in-view {
+                    opacity: 1;
+                }
+            }
+            &-out {
+                opacity: 1;
+                &.in-view {
+                    opacity: 0;
+                }
+            }
+        }
+        &-slide {
+            &-in {
+                transform: translateY(-100px);
+                opacity: 0;
+                &.in-view {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+                &-left {
+                    transform: translateX(-100px);
+                    opacity: 0;
+                    &.in-view {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
+                }
+                &-right {
+                    transform: translateX(100px);
+                    opacity: 0;
+                    &.in-view {
+                        transform: translateX(0%);
+                        opacity: 1;
+                    }
+                }
+                &-bottom {
+                    transform: translateY(100px);
+                    opacity: 0;
+                    &.in-view {
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &-scale {
+            &-in {
+                transform: scale(0.2);
+                opacity: 0;
+                &.in-view {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            &-out {
+                transform: scale(1);
+                opacity: 1;
+                &.in-view {
+                    transform: scale(1.8);
+                    opacity: 0;
+                }
+            }
+        }
+        &-shrink {
+            &-in {
+                transform: scale(1.8);
+                opacity: 0;
+                &.in-view {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            &-out {
+                transform: scale(1);
+                opacity: 1;
+                &.in-view {
+                    transform: scale(0.2);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &__duration {
+        &-default {
+            --transition-duration: 300ms;
+        }
+        &-none {
+            --transition-duration: 0ms;
+        }
+        &-short {
+            --transition-duration: 100ms;
+        }
+        &-long {
+            --transition-duration: 500ms;
+        }
+    }
+    &__delay {
+        &-default {
+            --transition-delay: 100ms;
+        }
+        &-none {
+            --transition-delay: 0ms;
+        }
+        &-short {
+            --transition-delay: 50ms;
+        }
+        &-long {
+            --transition-delay: 300ms;
+        }
+    }
+}

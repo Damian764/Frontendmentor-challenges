@@ -1,0 +1,27 @@
+@use "./../../assets/styles/colors" as *;
+
+.challenge {
+    margin-top: 5em;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            color: $primary-font-color;
+            text-decoration: none;
+            background-color: $accent-background;
+            padding: 0.5em 1em;
+            border-radius: 18px;
+            box-shadow: 0 0 20px $accent-background,0 0 20px $accent-background;
+            &:before {
+                content: "< ";
+            }
+        }
+        .title {
+            font-size: 2em;
+        }
+    }
+    .content {
+        margin-top: 2em;
+    }
+}

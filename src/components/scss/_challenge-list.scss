@@ -1,0 +1,29 @@
+@use "./../../assets/styles/colors" as *;
+
+.challenge-wrapper {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    margin-top: 10em;
+    .challenge-item {
+        a {
+            color: $primary-font-color;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 5px 20px white;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+        img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .description {
+            padding: 1em;
+        }
+    }
+}

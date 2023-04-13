@@ -1,0 +1,9 @@
+.animated-text {
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s ease-out;
+    display: inline-block;
+    &:hover {
+        transform: translateY(-0.1em) scale(1.1);
+    }
+}
