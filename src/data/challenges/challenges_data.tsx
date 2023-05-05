@@ -1,10 +1,16 @@
 import { ReactElement } from "react"
+
 export interface ChallengeListStructure {
     id: string,
     title: string,
     image?: string,
+    technologies?: string[],
     element: ReactElement<any, any>
 }
+
+// Challenges imports
+
+import QRComponent from '../../challenges/QR-code-component/Index'
 
 
 const challenges_data: ChallengeListStructure[] = [
@@ -12,7 +18,14 @@ const challenges_data: ChallengeListStructure[] = [
         id: 'qr-code-component-main',
         title: 'QR code component',
         image: 'desktop-design.jpg',
-        element: <h1>First challenge component</h1>
+        technologies: [
+            'React',
+            'React Router',
+            'TypeScript',
+            'Sass',
+            'Vite'
+        ],
+        element: <QRComponent />
     },
     {
         id: 'second-challenge',

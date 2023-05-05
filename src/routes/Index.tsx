@@ -21,7 +21,7 @@ const Index = () => {
             delay: 300
           }}
           reappear>
-          <p>My name is Damian and I'm a frontend developer</p>
+          <p>My name is Damian and I'm a frontend engineer</p>
         </AnimateOnScroll>
       </div>
       <div className="about-me container">

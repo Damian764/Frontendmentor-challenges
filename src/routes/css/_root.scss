@@ -3,28 +3,24 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: $page-background;
-    color: $primary-font-color;
+    background-color: var(--page-background);
+    color: var(--primary-font-color);
     font-family: "Montserrat";
     .container {
         padding-inline: 10vw;
     }
+}
 
+[dark-mode=on] {
     .logo {
         .light {
             display: none;
         }
-        .dark {
-            display: block;
-        }
     }
 }
 
-[theme="light"] {
+[dark-mode=off] {
     .logo {
-        .light {
-            display: block;
-        }
         .dark {
             display: none;
         }

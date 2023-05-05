@@ -6,14 +6,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
-    margin-top: 10em;
+    margin-top: 5em;
     .challenge-item {
         a {
-            color: $primary-font-color;
+            color: var(--common-color-white);
+            background-color: var(--accent-background);
             text-decoration: none;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 5px 20px white;
             border-radius: 18px;
             overflow: hidden;
         }

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $primary-background;
+    background-color: var(--primary-background);
     opacity: 0.95;
     .logo {
         text-decoration: none;
@@ -15,20 +15,25 @@
             color: #0e0e0e;
         }
         .dark {
-            color: $primary-font-color
+            color: var(--primary-font-color)
         }
     }
     .navigation ul {
         display: flex;
+        align-items: center;
         list-style: none;
-        gap: 1em;
+        gap: 5em;
         border-radius: 0 0 18px 18px;
         padding: 1em;
         margin: 0;
-        background-color: $primary-background;
+        background-color: var(--primary-background);
         li a {
-            color: $primary-font-color;
+            color: var(--primary-font-color);
             text-decoration: none;
+            &:hover,
+            &:focus {
+                color: var(--accent-font-color);
+            }
         }
     }
 }

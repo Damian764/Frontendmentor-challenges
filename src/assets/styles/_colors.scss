@@ -1,6 +1,19 @@
-$page-background: #011936;
+:root {
+    --common-color-white: #f5f6fa;
+    --common-color-black: #1A202C;
 
-$primary-background: #465362;
-$primary-font-color: #f5f6fa;
-$accent-background: #48018a;
-$accent-font-color: #8603fd;
+
+    --page-background: var(--common-color-black);
+    --primary-background: #171923;
+    --accent-background: #38B2AC;
+
+
+    --primary-font-color: var(--common-color-white);
+    --accent-font-color: #38B2AC;
+}
+:root[dark-mode=off] {
+    --page-background: #FFFFFF;
+    --primary-background: var(--common-color-white);
+
+    --primary-font-color: var(--common-color-black);
+}

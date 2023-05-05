@@ -1,10 +1,6 @@
 import './scss/_text-hover-effect.scss'
 
-type TextHoverEffectProps = {
-    text: string
-}
-
-const TextHoverEffect = ({ text }: TextHoverEffectProps) => {
+const TextHoverEffect = ({ text }: { text: string }) => {
     return (
         <>
             {text.split('').map((letter, idx) => <span key={idx} className="animated-text">{letter === " " ? "\u00A0" : letter}</span>)}

@@ -23,7 +23,6 @@ export const ChallengeList = () => {
                         <img loading="lazy" src={challenge.image ? `/challenges/${challenge.id}/${challenge.image}` : '/no-preview.jpeg'} />
                         <div className="description">
                             <h3>{challenge.title}</h3>
-                            <p>{200 * (idx % 4)}</p>
                         </div>
                     </Link>
                 </AnimateOnScroll>
