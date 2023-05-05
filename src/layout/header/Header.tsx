@@ -1,6 +1,7 @@
 import "./_header.scss"
 import { NavLink } from "react-router-dom";
 import { menu_data, MenuLinkStructure } from './../../data/menu/menu_data';
+import ThemeSwitcher from "../../utils/ThemeSwitcher";
 
 const Header = () => {
     return (
@@ -13,6 +14,7 @@ const Header = () => {
             <div className="navigation">
                 <ul>
                     {menu_data.map((element: MenuLinkStructure) => <li key={element.id} className="navigation-link"><NavLink to={element.link}>{element.title}</NavLink></li>)}
+                    <li><ThemeSwitcher /></li>
                 </ul>
             </div>
         </nav>
