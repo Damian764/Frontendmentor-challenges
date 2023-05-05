@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, RefObject } from "react"
 import { trueTypeOf } from "./utils"
 import './scss/_animate-on-scroll.scss'
 
@@ -48,20 +48,26 @@ const useElementOnScreen = (options: { threshold: number, reappear: boolean }) =
     return [containerRef, isVisible]
 }
 
-const AnimateOnScroll = ({
-    children,
-    reappear = false,
-    options = {},
-    threshold = 0.5,
-}: AnimateOnScrollProps) => {
+const AnimateOnScroll = (
+    {
+        children,
+        reappear = false,
+        options = {},
+        threshold = 0.5,
+    }: AnimateOnScrollProps) => {
+
+
     options.type = options.type || "fade-in"
     options.duration = options.duration || "default"
     options.delay = options.delay || "default"
     options.timing = options.timing || "ease-out"
+
+
     const [containerRef, isVisible] = useElementOnScreen({
         threshold: threshold,
         reappear: reappear,
     })
+
     const classes = `animation animation__type-${options.type} ${isVisible ? "in-view" : ''
         } ${trueTypeOf(options.duration) === "string"
             ? `animation__duration-${options.duration}`
@@ -70,9 +76,11 @@ const AnimateOnScroll = ({
             ? `animation__delay-${options.delay}`
             : ''
         }`
+
     let styles: any = {
         '--transition-timing': options.timing
     };
+
     if (trueTypeOf(options.duration) === 'number') {
         styles['--transition-duration'] = `${options.duration}ms`
     }
@@ -82,7 +90,7 @@ const AnimateOnScroll = ({
 
     return (
         <div
-            ref={containerRef as React.RefObject<HTMLDivElement>}
+            ref={containerRef as RefObject<HTMLDivElement>}
             className={classes}
             style={styles ? styles : null}
         >
