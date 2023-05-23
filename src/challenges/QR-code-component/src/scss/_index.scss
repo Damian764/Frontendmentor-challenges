@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+// COLORS
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+// FONTS
+$font-size: 15px;
+$font-family: Outfit;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+// WIDTHS
+$mobile: 375px;
+$desktop: 1440px;
+
+.qr__component {
+    &-challenge {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        background-color: $light-gray;
+        padding-block: 5em;
+        padding-inline: 1.75em;
+        font-family: $font-family;
+    }
+    &-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: $white;
+        box-shadow: 0 20px 50px -20px $grayish-blue;
+        max-width: $mobile;
+        padding: 15px;
+    }
+    &-image {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &-title {
+        color: $dark-blue;
+        padding-inline: 0em;
+        font-size: 1.4em;
+        line-height: 1.3em;
+        margin-block: 25px 15px;
+    }
+    &-description {
+        color: $grayish-blue;
+        padding-inline: 1em;
+        line-height: 1.1em;
+        margin-bottom: 20px;
+    }
+}
+#qr__component footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1em;
+}
