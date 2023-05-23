@@ -10,7 +10,7 @@ export interface ChallengeListStructure {
 
 // Challenges imports
 
-import QRComponent from '../../challenges/QR-code-component/Index'
+import QRComponent from '../../challenges/QR-code-component/src/Index'
 
 
 const challenges_data: ChallengeListStructure[] = [
